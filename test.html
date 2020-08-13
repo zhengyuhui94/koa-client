@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Dog(){
+        //     this.name = 'ker';
+        // }
+        // function Animal(){
+        //     this.good = '骨头';
+        //     this.say = function(){
+        //         console.log('汪汪汪');
+        //     }
+        // }
+
+        // Animal.prototype.eat = function(){
+        //     console.log('吃东西');
+        // }
+
+        // Dog.prototype = new Animal();
+        // var dog = new Dog();
+        // var dog2 = new Dog();
+        // console.log(dog.__proto__.__proto__.constructor === Animal);
+        // console.log(dog2);
+
+        function test(){
+            var num = 1;
+            return function(){
+                num++;
+                console.log(num);
+            }
+        }
+
+        var test2 = test(); // 生成的闭包
+    </script>
+</body>
+</html>

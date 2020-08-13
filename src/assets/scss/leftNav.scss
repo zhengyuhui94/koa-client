@@ -1,0 +1,129 @@
+// 左侧菜单栏组件样式
+.left-nav {
+    .no-children {
+        padding-left: 24px!important;
+
+        &.is-active {
+            i, svg, .title {
+                color: #1690F2!important;
+            }
+        }
+    }
+
+    .el-menu-vertical-demo {
+        background-color: #0D101F;
+        border-right: none;
+    }
+
+    .submenu {
+        .el-submenu__title {
+            line-height: 58px;
+            padding-left: 24px!important;
+            padding-right: 16px;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.05)!important;
+
+                i, svg, .title {
+                    color: #ffffff!important;
+                }
+            }
+        }
+    }
+
+    .item-submenu {
+        .el-submenu__title {
+            padding-left: 54px !important;
+
+            .el-submenu__icon-arrow {
+                top: 50%;
+            }
+        }
+    }
+
+    .el-submenu__icon-arrow {
+        top: 56%;
+    }
+
+    .is-opened {
+        background: #0E1225!important;
+    }
+
+    .el-menu-item-group__title {
+        padding: 0;
+    }
+
+    .el-submenu .el-menu-item {
+        padding-left: 54px!important;
+    }
+
+    .item-submenu .el-menu {
+        .el-menu-item {
+            padding-left: 70px !important;
+        }
+    }
+
+    .submenu {
+        .el-menu-item, .item-submenu .el-submenu__title {
+            height: 44px;
+            line-height: 44px;
+            color: rgba(255,255,255,0.50)!important;
+            padding-right: 8px!important;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+            &:focus {
+                background-color: transparent !important;
+            }
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.05)!important;
+                color: #ffffff !important;
+                overflow: inherit;
+
+                &::before {
+                    background-color: transparent !important;
+                    border: 1px solid #ffffff !important;
+                }
+            }
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                margin-right: 8px;
+                background-color: transparent;
+                border-radius: 50%;
+                border: 1px solid rgba(255,255,255,0.50);
+                vertical-align: middle;
+            }
+    
+            &.is-active {
+                color: #1690F2!important;
+    
+                &::before {
+                    background-color: #1690F2;
+                    border: none;
+                }
+            }
+        }
+
+        .el-menu-item-group .el-menu-item {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.05)!important;
+                color: #ffffff!important;
+            }
+        }
+
+        &.is-active {
+            .el-submenu__title {
+                i, svg, .title {
+                    color: #ffffff;
+                }
+            }
+        }
+
+        
+    }    
+}
