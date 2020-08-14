@@ -15,7 +15,7 @@ const MessageCenter = () => import('@/views/MessageCenter.vue');
 Vue.use(Router);
 
 const router = new Router({
-    mode: 'history',
+    mode: 'hash',
     routes: [
         {
             path: '/',
