@@ -20,7 +20,7 @@ let REQUEST_PATH: any = {
 
 if(process.env.NODE_ENV === 'development'){
     for(let key in REQUEST_PATH){
-        REQUEST_PATH[key] = `/api${REQUEST_PATH[key]}`;
+        REQUEST_PATH[key] = `http://127.0.0.1:8081${REQUEST_PATH[key]}`;
     }
 }else{
     for(let key in REQUEST_PATH){

@@ -5,13 +5,13 @@ import axios, {AxiosPromise, AxiosRequestConfig, AxiosInstance} from 'axios';
 Vue.use(ElementUI);
 
 // 创建一个新的 axios 实例
-// const axiosInstance: AxiosInstance = axios.create({
-//     baseURL: process.env.NODE_ENV === 'development' ? '' : `http://81.70.15.16/:8081`,
-//     // 设置请求超时的最大时长
-//     timeout: 180000
-// });
-
-console.log(process.env.NODE_ENV);
+const axiosInstance: AxiosInstance = axios.create({
+    // baseURL: process.env.NODE_ENV === 'development' ? '' : `http://81.70.15.16/:8081`,
+    // 设置请求超时的最大时长
+    timeout: 180000,
+    // 允许服务器在跨域情况下，获取客户端的 cookie 信息【跨域即不同源，正常情况服务器默认只能获取同源的 cookie】
+    withCredentials: true
+});
 
 // 请求类
 class RequestTool {
@@ -26,7 +26,7 @@ class RequestTool {
     // get 请求，config 跟 axios 参数配置一致
     private get(url: string, config?: AxiosRequestConfig): AxiosPromise{
         return new Promise((resolve, reject) => {
-            axios.get(url, config).then((res) => {
+            axiosInstance.get(url, config).then((res) => {
                 const data = res.data;
                 if(data.code === 0){
                     resolve(data);
@@ -46,7 +46,7 @@ class RequestTool {
     // post 请求，requestData、config 跟 axios 参数配置一致
     private post(url: string, requestData?: any, config?: AxiosRequestConfig): AxiosPromise{
         return new Promise((resolve, reject) => {
-            axios.post(url, requestData, config).then((res) => {
+            axiosInstance.post(url, requestData, config).then((res) => {
                 const data = res.data;
                 if(data.code === 0){
                     resolve(data);
