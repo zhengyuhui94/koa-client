@@ -7,6 +7,7 @@ let REQUEST_PATH: any = {
     'updateAvatar': '/admin/updateAvatar',
     'updateInfo': '/admin/updateInfo',
     'register': '/admin/register',
+    'logout': '/admin/logout',
     'categoryDel': '/goodManage/category/del',
     'categoryList': '/goodManage/category/list',
     'categoryAdd': '/goodManage/category/add',
@@ -16,6 +17,7 @@ let REQUEST_PATH: any = {
     'goodInfoDel': '/goodManage/info/del',
     'goodInfoChangeStatu': '/goodManage/info/changeStatu',
     'goodInfoList': '/goodManage/info/list',
+    'getMessageId': '/admin/message/getMessageId',
 };
 
 if(process.env.NODE_ENV === 'development'){

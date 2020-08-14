@@ -17,6 +17,7 @@
         Vue,
         Prop,
     } from 'vue-property-decorator';
+    import REQUEST_PATH from '@/config/request/path';
 
     @Component
     export default class MessageList extends Vue {
@@ -32,7 +33,7 @@
 
         private async select(item: any, index: number): Promise<void>{
             if(index === 0 && item.id === -1){
-                const {data} = await this.$requestTool.post('/admin/message/getMessageId', {
+                const {data} = await this.$requestTool.post(REQUEST_PATH.getMessageId, {
                     user_id: item.user_id
                 });
                 this.$store.commit('setMessageId', data.length > 0 ? data[0].id : -1);

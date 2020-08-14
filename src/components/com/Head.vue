@@ -29,6 +29,7 @@
         Component,
         Vue
     } from 'vue-property-decorator';
+    import REQUEST_PATH from '@/config/request/path';
 
     @Component
     export default class Head extends Vue {
@@ -51,7 +52,7 @@
         }
 
         private async logout(): Promise<void>{
-            await this.$requestTool.post('/admin/logout');
+            await this.$requestTool.post(REQUEST_PATH.logout);
             this.$router.push({
                 name: 'login'
             });
