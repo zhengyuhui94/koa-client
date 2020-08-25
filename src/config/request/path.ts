@@ -26,7 +26,7 @@ if(process.env.NODE_ENV === 'development'){
     }
 }else{
     for(let key in REQUEST_PATH){
-        REQUEST_PATH[key] = `https://koamall.top/api${REQUEST_PATH[key]}`;
+        REQUEST_PATH[key] = `http://koamall.top:8081${REQUEST_PATH[key]}`;
     }
 }
 
