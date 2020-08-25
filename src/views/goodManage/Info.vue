@@ -144,7 +144,7 @@
 
         // 导出数据
         private async exportExcel(): Promise<void>{
-            let path = 'http://81.70.15.16:8081/goodManage/info/exportExcel';
+            let path = 'https://koamall.top:8081/goodManage/info/exportExcel';
             if(process.env.NODE_ENV === 'development'){
                 path = 'http://localhost:8081/goodManage/info/exportExcel';
             }
